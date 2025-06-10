@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TimeZone API</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <!-- Header Section -->
+      <div class="header">
+        <h1>TimeZone API</h1>
+        <h2>Your Current Time Zone</h2>
+
+        <div class="timezone-display" id="currentTimezone">
+          <div class="timezone-info">
+            <div class="info-item">
+              <span class="info-label">Name Of Time Zone :</span>
+              <span class="info-value" id="currentTzName">Loading...</span>
+            </div>
+            <div class="info-item">
+              <span class="info-label">Lat:</span>
+              <span class="info-value" id="currentLat">Loading...</span>
+            </div>
+            <div class="info-item">
+              <span class="info-label">Long:</span>
+              <span class="info-value" id="currentLong">Loading...</span>
+            </div>
+            <div class="info-item">
+              <span class="info-label">Offset STD:</span>
+              <span class="info-value" id="currentOffsetStd">Loading...</span>
+            </div>
+            <div class="info-item">
+              <span class="info-label">Offset STD Seconds :</span>
+              <span class="info-value" id="currentOffsetStdSec"
+                >Loading...</span
+              >
+            </div>
+            <div class="info-item">
+              <span class="info-label">Offset DST :</span>
+              <span class="info-value" id="currentOffsetDst">Loading...</span>
+            </div>
+            <div class="info-item">
+              <span class="info-label">Offset DST Seconds:</span>
+              <span class="info-value" id="currentOffsetDstSec"
+                >Loading...</span
+              >
+            </div>
+            <div class="info-item">
+              <span class="info-label">Country:</span>
+              <span class="info-value" id="currentCountry">Loading...</span>
+            </div>
+            <div class="info-item">
+              <span class="info-label">Postcode:</span>
+              <span class="info-value" id="currentPostcode">Loading...</span>
+            </div>
+            <div class="info-item">
+              <span class="info-label">City:</span>
+              <span class="info-value" id="currentCity">Loading...</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Address Input Section -->
+      <div class="address-section">
+        <h3>Enter Address</h3>
+        <div class="address-form">
+          <input
+            type="text"
+            class="address-input"
+            id="addressInput"
+            placeholder="Address"
+          />
+          <button class="submit-btn" id="submitBtn" onclick="searchTimezone()">
+            Submit
+          </button>
+          <div class="error-message hidden" id="errorMessage"></div>
+        </div>
+      </div>
+
+      <!-- Result Section -->
+      <div class="result-section hidden" id="resultSection">
+        <h3>Your result</h3>
+        <div class="result-display">
+          <div class="timezone-info">
+            <div class="info-item">
+              <span class="info-label">Name Of Time Zone :</span>
+              <span class="info-value" id="resultTzName"></span>
+            </div>
+            <div class="info-item">
+              <span class="info-label">Lat:</span>
+              <span class="info-value" id="resultLat"></span>
+            </div>
+            <div class="info-item">
+              <span class="info-label">Long:</span>
+              <span class="info-value" id="resultLong"></span>
+            </div>
+            <div class="info-item">
+              <span class="info-label">Offset STD:</span>
+              <span class="info-value" id="resultOffsetStd"></span>
+            </div>
+            <div class="info-item">
+              <span class="info-label">Offset STD Seconds :</span>
+              <span class="info-value" id="resultOffsetStdSec"></span>
+            </div>
+            <div class="info-item">
+              <span class="info-label">Offset DST :</span>
+              <span class="info-value" id="resultOffsetDst"></span>
+            </div>
+            <div class="info-item">
+              <span class="info-label">Offset DST Seconds:</span>
+              <span class="info-value" id="resultOffsetDstSec"></span>
+            </div>
+            <div class="info-item">
+              <span class="info-label">Country:</span>
+              <span class="info-value" id="resultCountry"></span>
+            </div>
+            <div class="info-item">
+              <span class="info-label">Postcode:</span>
+              <span class="info-value" id="resultPostcode"></span>
+            </div>
+            <div class="info-item">
+              <span class="info-label">City:</span>
+              <span class="info-value" id="resultCity"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
